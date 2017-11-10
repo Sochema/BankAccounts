@@ -58,13 +58,28 @@ header a{
 
 header a:hover{
   text-decoration: none;
-	color:#2EB872;
 }
 
 
 
+/*============= BODY ===============*/
 
+.menu{
+  margin: 10%;
+}
 
+.menu a{
+  font-size: 13px;
+}
+
+.card-link {
+  text-decoration: none;
+	color: grey;
+}
+
+.card{
+  /*width:25%;*/
+}
 
 
 

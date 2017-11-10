@@ -15,7 +15,7 @@
   <!-- Google Fonts -->
    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Special+Elite|Ultra|Zilla+Slab+Highlight" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Codystar|Montserrat+Subrayada" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Akronim|Dr+Sugiyama|Molle:400i" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Akronim|Dr+Sugiyama|Molle:400i" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
 
@@ -34,6 +34,6 @@
     <div class="navbar">
       <h1>SCAMPIA ACCOUNTS</h1>
       <p>The best napolitan bank since 1870</p>
-      <p><a href="#">Create an account</a></p>
+      <p><a class="btn btn-danger" href="#">Create an account</a></p>
     </div>
   </header>
