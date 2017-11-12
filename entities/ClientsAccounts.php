@@ -1,7 +1,7 @@
 <?php
 
 class ClientsAccounts{
-  // protected $_id;
+  protected $_id;
   protected $_iban;
   protected $_holder;
   protected $_amount;
@@ -13,12 +13,12 @@ public function __construct($AllAccounts){
   }
 
 //SETTERS
-  // public function setId($id){
-  //   $id = (int)$id;
-  //     if(is_int($id) && $id>0){
-  //       $this->_id=$id;
-  //     }
-  // }
+  public function setId($id){
+    $id = (int)$id;
+      if(is_int($id) && $id>0){
+        $this->_id=$id;
+      }
+  }
 
   public function setIban($iban){
     $iban = (int) $iban;
@@ -38,9 +38,9 @@ public function __construct($AllAccounts){
 
 
 //GETTER
-// public function getId(){
-//   return $this->_id;
-// }
+public function getId(){
+  return $this->_id;
+}
 
 public function getIban(){
   return $this->_iban;

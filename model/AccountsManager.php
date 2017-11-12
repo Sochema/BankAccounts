@@ -18,15 +18,12 @@ class AccountsManager {
     //FUNCTION WHICH ADDS CATS TO THE DATA BASE
       public function addAccounts($theAccount){
         $requete=$this->getBdd()->prepare('INSERT INTO accounts(iban, holder, amount) VALUES (:iban, :holder, :amount)');
-
         $requete->execute(array(
           'iban' => $theAccount->getIban(),
           'holder' => $theAccount->getHolder(),
           'amount' => $theAccount->getAmount()
         ));
       }
-
-
 
 }
 

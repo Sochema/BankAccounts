@@ -5,22 +5,26 @@
   <button class="btn btn-outline-secondary" data-toggle="modal2" data-target="#myModal2">PAYMENT</button>
   <button class="btn btn-outline-secondary" data-toggle="modal3" data-target="#myModal3">WITHDRAWAL</button>
 </div>
+<?php
+foreach ($AllAccounts as $AnAccount){
+  ?>
 
 <!-- CARDS  -->
-<div class="card d-flex justify-content-around">
+<div class="card d-flex justify-content-around" style="width: 20rem;">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">
-
-    </p>
+    <h4 class="card-title"><?php echo $AnAccount->getIban();?></h4>
+    <h6 class="card-subtitle mb-2 text-muted"><?php echo $AnAccount->getHolder(); ?></h6>
+    <p class="card-text"><?php echo $AnAccount->getAmount(); ?> €</p>
   </div>
 </div>
 
+<?php
+}
+ ?>
 
 <!--ADD FORM-->
 
-<form method="post" action="">
+<form class="addform" method="post" action="">
   <div class="form-group">
     <label for="iban">Iban</label>
     <input type="number" name="iban" class="form-control" id="iban" placeholder="Iban">
