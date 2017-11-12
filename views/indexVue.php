@@ -17,6 +17,7 @@
     <h4 class="card-title"><strong>IBAN: </strong><?php echo $AnAccount->getIban();?></h4>
     <h6 class="card-subtitle mb-2 text-muted"><strong>Holder: </strong><?php echo $AnAccount->getHolder(); ?></h6>
     <p class="card-text"><strong>Amount: </strong><?php echo $AnAccount->getAmount(); ?> €</p>
+    <a class="delete btn btn-outline-secondary" href="index.php?accountId=<?php echo $AnAccount->getId(); ?>">DELETE ACCOUNT</a>
   </div>
 </div>
 <?php

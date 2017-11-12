@@ -90,7 +90,9 @@ header a:hover{
 	color: grey;
 }
 
-
+.delete {
+  text-align: center;
+}
 
 
 @media (min-width: 400px) {
@@ -106,7 +108,15 @@ header a:hover{
     /*justify-content: space-around;*/
   }
 
+  .card{
+    margin-bottom: 10%;
+  }
+
   .card-title{
+    text-align: center;
+  }
+
+  .delete {
     text-align: center;
   }
 }

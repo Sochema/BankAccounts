@@ -28,12 +28,22 @@ if(isset($_POST['submit'])){
     }
   }
 }
-  $AllAccounts = $AccountsManager->getAccounts();
 
+//TO DISPLAY THE ACCOUNT ONE BY ONE
+  $AllAccounts = $AccountsManager->getAccounts();
   foreach($AllAccounts as $key=>$value){
     $AllAccounts[$key] = new ClientsAccounts($value);
     // en fait $value correspond à ce qui va être envoyé dans mon constructeur Cats -> hydratation.
   }
+
+//DELETE ACCOUNT
+// $deleteAccount = $AccountsManager->deleteAccount($_GET['id']);
+
+if(isset($_GET['accountId'])){
+  $ClientId = $_GET['accountId'];
+  $deleteAccount = $AccountsManager->deleteAccount($ClientId);
+}
+
 
 
 include "../views/indexVue.php";
