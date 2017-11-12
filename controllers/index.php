@@ -7,26 +7,34 @@ function loadClass($class){
 spl_autoload_register("loadClass");
 
 $AccountsManager= new AccountsManager();
+$ClientAccount= new ClientsAccounts($_POST);
+$AccountsManager->addAccounts($ClientAccount);
 
+var_dump($ClientAccount);
 // if(isset($_POST['submit'])){
-  if(isset($_POST['iban'])){
-    // if (preg_match("#^[0-9]{9}$#", $_POST['iban'])) {
-      if(isset($_POST['holder']) && is_string($_POST['holder'])) {
-      // htmlspecialchars;
-        if (isset($_POST['amount']) && $_POST['amount']>0) {
-          $ClientAccount= new ClientsAccounts($_POST);
-          $AccountsManager->addAccounts($ClientAccount);
-        } else {
-          echo "The amount is not valid - The amount is a number over 0";
-        }
-      } else {
-        echo "The holder's name is not valid. It should not contain any numbers.";
-      }
-    // }
-  } else {
-    echo "The IBAN is not valid. The IBAN composed of 9 numbers.";
+  // if(isset($_POST['iban'], $_POST['holder'], $_POST['amount'])){
+  //   if (preg_match("#^[0-9]{9}$#", $_POST['iban'])) {
+  //     if(is_string($_POST['holder'])) {
+  //     // htmlspecialchars;
+  //       if ($_POST['amount']>0) {
+  //         $ClientAccount= new ClientsAccounts($_POST);
+  //         $AccountsManager->addAccounts($ClientAccount);
+  //       } else {
+  //         echo "The amount is not valid - The amount is a number over 0";
+  //       }
+  //     } else {
+  //       echo "The holder's name is not valid. It should not contain any numbers.";
+  //     }
+  //   // }
+  //   } else {
+  //     echo "The IBAN is not valid. The IBAN composed of 9 numbers.";
+  //   }
+  // }
+
+  if(isset($_POST['iban'], $_POST['holder'], $_POST['amount'])){
+    $ClientAccount= new ClientsAccounts($_POST);
+    $AccountsManager->addAccounts($ClientAccount);
   }
-// }
 
   // $AllAccounts = $AccountsManager->getAccounts();
 
