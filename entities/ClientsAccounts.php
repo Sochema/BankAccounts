@@ -22,9 +22,7 @@ public function __construct($AllAccounts){
 
   public function setIban($iban){
     $iban = (int) $iban;
-      if(is_int($iban) && $iban>0 && $iban<= 100000000)){
-        $this->_iban=$iban;
-      }
+    $this->_iban=$iban;
   }
 
   public function setHolder($holder){

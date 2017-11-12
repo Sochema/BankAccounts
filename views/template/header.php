@@ -11,11 +11,12 @@
   <link rel="icon" href="favicon.ico" />
   <!-- Fontawesome Link-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <!-- Google Fonts -->
    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Special+Elite|Ultra|Zilla+Slab+Highlight" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Codystar|Montserrat+Subrayada" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Akronim|Dr+Sugiyama|Molle:400i" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Akronim|Dr+Sugiyama|Molle:400i" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
 
@@ -26,6 +27,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
   <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js">
 </head>
 
 <body>

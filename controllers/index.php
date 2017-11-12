@@ -1,17 +1,32 @@
 <?php
-require ("../entities/ClientsAccounts.php");
 require ("../model/AccountsManager.php");
+
+function loadClass($class){
+  require("../entities/".$class.".php");
+}
+spl_autoload_register("loadClass");
+
 
 $AccountsManager= new AccountsManager();
 
-if(isset($_POST['iban'], $_POST['holder'], $_POST['amount'])){
-  if(is_int($_POST['iban'], $_POST['amout']) && is_string($_POST['holder'])){
-    $ClientAccount= new ClientsAccounts($_POST);
-    $AccountsManager->addAccounts($ClientAccount);
+if(isset($_POST['submit'])){
+  if(isset($_POST['iban']) && preg_match("#^[0-9]{9}$#", $_POST['iban'])){
+    if(isset($_POST['holder']) && is_string($_POST['holder'])) {
+      // htmlspecialchars;
+      if (isset($_POST['amount']) && $_POST['amount']>0) {
+        $ClientAccount= new ClientsAccounts($_POST);
+        $AccountsManager->addAccounts($ClientAccount);
+      } else {
+        echo "The amount is not valid - The amount is a number over 0";
+      }
+    } else {
+    echo "The holder's name is not valid. It should not contain any numbers.";
+    }
   } else {
-    echo 'Error - Something is wrong. Reminder : The Iban should be between 0 and 10000000 included, the amount is an intege and the holder\'s name can\'t contain a number';
+    echo "The IBAN is not valid. The IBAN composed of 9 numbers.";
   }
 }
+
   // $AllAccounts = $AccountsManager->getAccounts();
 
   // foreach($AllAccounts as $key=>$value){
