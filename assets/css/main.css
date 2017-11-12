@@ -66,10 +66,23 @@ header a:hover{
 
 .menu{
   margin: 10%;
+  font-size: 10px;
 }
 
 .menu a{
-  font-size: 13px;
+  font-size: 10px;
+}
+
+.card-title{
+  text-align: center;
+}
+
+.card{
+  /*background-image: url('../../img/italianoldmoney.jpg');*/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 7%;
 }
 
 .card-link {
@@ -77,12 +90,26 @@ header a:hover{
 	color: grey;
 }
 
-.card{
-  /*width:25%;*/
+
+
+
+@media (min-width: 400px) {
+
+  .menu{
+    margin: 5%;
+    font-size: 10px;
+  }
+
+  .cards {
+    display:flex;
+    flex-wrap: wrap;
+    /*justify-content: space-around;*/
+  }
+
+  .card-title{
+    text-align: center;
+  }
 }
-
-
-
 
 /*
  * Remove text-shadow in selection highlight:

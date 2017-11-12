@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
     if (preg_match("#^[0-9]{9}$#", $_POST['iban'])) {
       if(isset($_POST['holder']) && is_string($_POST['holder'])) {
       // htmlspecialchars;
-        if(isset($_POST['amount']) && $_POST['amount']>0) {
+        if(isset($_POST['amount']) && $_POST['amount']>=0) {
           $ClientAccount= new ClientsAccounts($_POST);
           $AccountsManager->addAccounts($ClientAccount);
         } else {
@@ -32,7 +32,6 @@ if(isset($_POST['submit'])){
 
   foreach($AllAccounts as $key=>$value){
     $AllAccounts[$key] = new ClientsAccounts($value);
-    var_dump($AllAccounts);
     // en fait $value correspond à ce qui va être envoyé dans mon constructeur Cats -> hydratation.
   }
 
