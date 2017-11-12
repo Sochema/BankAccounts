@@ -3,7 +3,7 @@
 class AccountsManager {
 
   public function getBdd() {
-      $bdd = new PDO('mysql:host=localhost;dbname=ScampiaAccounts;charset=utf8', 'root', '');
+      $bdd = new PDO('mysql:host=localhost;dbname=ScampiaAccounts;charset=utf8', 'root', 'root');
       return $bdd;
   }
 
@@ -24,7 +24,6 @@ class AccountsManager {
           'holder' => $theAccount->getHolder(),
           'amount' => $theAccount->getAmount()
         ));
-
       }
 
 
