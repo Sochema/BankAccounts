@@ -64,12 +64,11 @@ header a:hover{
 
 /*============= BODY ===============*/
 
-.menu{
-  margin: 10%;
+#menubar{
   font-size: 10px;
 }
 
-.menu a{
+#menubar a{
   font-size: 10px;
 }
 
@@ -78,11 +77,8 @@ header a:hover{
 }
 
 .card{
-  /*background-image: url('../../img/italianoldmoney.jpg');*/
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   margin-bottom: 7%;
+  margin-top: 7%;
 }
 
 .card-link {
@@ -95,10 +91,55 @@ header a:hover{
 }
 
 
+
+/* ====== FORM =========*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 @media (min-width: 400px) {
 
-  .menu{
-    margin: 5%;
+  #menubar{
     font-size: 10px;
   }
 
@@ -110,15 +151,16 @@ header a:hover{
 
   .card{
     margin-bottom: 10%;
+    margin-top: 10%;
   }
 
   .card-title{
     text-align: center;
   }
 
-  .delete {
+  /*.delete {
     text-align: center;
-  }
+  }*/
 }
 
 /*

@@ -1,10 +1,5 @@
 <?php include("template/header.php"); ?>
 
-<div class="menu d-flex justify-content-around">
-  <button class="btn btn-outline-secondary" data-toggle="modalOne" data-target="#modalOne">TRANSFER</button>
-  <button class="btn btn-outline-secondary" data-toggle="modal2" data-target="#myModal2">PAYMENT</button>
-  <button class="btn btn-outline-secondary" data-toggle="modal3" data-target="#myModal3">WITHDRAWAL</button>
-</div>
 
 
 <div class="container-fluid">
@@ -12,12 +7,17 @@
 
 <?php foreach ($AllAccounts as $AnAccount){ ?>
 <!-- CARDS  -->
-<div class="card" style="width: 20rem;">
+<div class="card m-10" style="width: 20rem;">
   <div class="card-body">
     <h4 class="card-title"><strong>IBAN: </strong><?php echo $AnAccount->getIban();?></h4>
     <h6 class="card-subtitle mb-2 text-muted"><strong>Holder: </strong><?php echo $AnAccount->getHolder(); ?></h6>
     <p class="card-text"><strong>Amount: </strong><?php echo $AnAccount->getAmount(); ?> €</p>
-    <a class="delete btn btn-outline-secondary" href="index.php?accountId=<?php echo $AnAccount->getId(); ?>">DELETE ACCOUNT</a>
+    <div class="row" id="menubar">
+      <a class="col-6 delete btn btn-outline-secondary" href="index.php?accountId=<?php echo $AnAccount->getId(); ?>">DELETE ACCOUNT</a>
+      <a class="col-6 btn btn-outline-secondary" href="index.php?accountId=<?php echo $AnAccount->getId(); ?>">TRANSFER</a>
+      <a class="col-6 btn btn-outline-secondary" href="index.php?accountId=<?php echo $AnAccount->getId(); ?>">PAYMENT</a>
+      <a class="col-6 btn btn-outline-secondary" href="index.php?accountId=<?php echo $AnAccount->getId(); ?>">WITHDRAWAL</a>
+    </div>
   </div>
 </div>
 <?php
@@ -29,6 +29,7 @@
 <!--ADD FORM-->
 
 <form class="addform" method="post" action="">
+  <h2> CREATE YOUR OWN ACCOUNT </h2>
   <div class="form-group">
     <label for="iban">Iban</label>
     <input type="number" name="iban" class="form-control" id="iban" placeholder="Iban">
@@ -45,6 +46,44 @@
   </div>
 <input type="submit" name="submit" class="btn btn-outline-secondary"></input>
 </form>
+
+
+<hr>
+
+
+<form class="" method="post" action="">
+  <h2> WITHDRAWAL </h2>
+  <div class="form-group">
+    <label for="amount">Amount of the payment</label>
+    <input type="number" name="amount" class="form-control" id="amount" placeholder="€">
+    <small>Enter your amount (it should be a positive amount).</small>
+  </div>
+<input type="submit" name="submit" class="btn btn-outline-secondary"></input>
+</form>
+
+<hr>
+
+
+
+<form class="" method="post" action="">
+  <h2> PAYMENTS </h2>
+  <div class="form-group">
+    <label for="debited">Debited Account</label>
+    <input type="number" name="debited" class="form-control" id="debited" placeholder="IBAN account">
+    <small>Enter the IBAN number of the debited account</small>
+  </div>
+  <div class="form-group">
+    <label for="credited">Credited Account</label>
+    <input name="credited" type="number" class="form-control" id="credited" placeholder="IBAN account">
+  </div>
+  <div class="form-group">
+    <label for="amount">Amount of the payment</label>
+    <input type="number" name="amount" class="form-control" id="amount" placeholder="€">
+    <small>Enter a positive account.</small>
+  </div>
+<input type="submit" name="submit" class="btn btn-outline-secondary"></input>
+</form>
+
 
 
 <!--

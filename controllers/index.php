@@ -42,6 +42,7 @@ if(isset($_POST['submit'])){
 if(isset($_GET['accountId'])){
   $ClientId = $_GET['accountId'];
   $deleteAccount = $AccountsManager->deleteAccount($ClientId);
+  header('Location: index.php');
 }
 
 

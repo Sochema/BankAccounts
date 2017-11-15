@@ -5,6 +5,7 @@ class ClientsAccounts{
   protected $_iban;
   protected $_holder;
   protected $_amount;
+  protected $_debitedAmount;
 
 
 //CONSTRUCTEUR
@@ -36,6 +37,11 @@ public function __construct($AllAccounts){
         $this->_amount=$amount;
   }
 
+  public function setDebitedAmount($debitedAmount){
+    $debitedAmount = (int)$debitedAmount;
+    $this->_debitedAmount=$debitedAmount;
+  }
+
 
 //GETTER
 public function getId(){
@@ -54,6 +60,10 @@ public function getAmount(){
   return $this->_amount;
 }
 
+public function getDebitedAmount(){
+  return $this->_debitedAmount;
+}
+
 
 //FUNCTION HYDRATE
 
@@ -68,6 +78,11 @@ public function getAmount(){
   }
 
 
+//FUNCTION WITHDRAWAL
+
+public function withdrawal(){
+  $this->_amount - $this->_debitedAmount;
+}
 
 
 }

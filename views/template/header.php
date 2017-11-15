@@ -25,9 +25,6 @@
   <link rel="stylesheet" href="../assets/css/normalize.css">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-  <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js">
 </head>
 
 <body>
